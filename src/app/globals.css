@@ -1,21 +1,59 @@
 @tailwind base;
+
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-balance;
+    }
+
+    h1 {
+        @apply text-3xl
+          sm:text-4xl
+          lg:text-7xl;
+    }
+    h2 {
+        @apply text-xl
+          sm:text-2xl
+          lg:text-5xl;
+    }
+    h3 {
+        @apply mt-10
+          mb-5
+          text-lg sm:text-xl lg:text-2xl;
+    }
+
+    h4,
+    h5,
+    h6 {
+        @apply text-base
+          sm:text-lg
+          lg:text-xl;
+    }
+
+    a {
+        @apply inline-block
+          text-primary
+          underline
+          font-bold;
+    }
+}
+
+input,
+select {
+    @apply rounded;
+}
+
+input::-webkit-date-and-time-value {
+    @apply text-left;
+}
+
+input::-webkit-datetime-edit-day-field {
+    @apply -ml-2;
+}
+
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
